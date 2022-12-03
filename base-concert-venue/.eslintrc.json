@@ -16,19 +16,20 @@
     "@typescript-eslint"
   ],
   "settings": {
-    "import/resolver": {
-      "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      },
-      "typescript": {
-        "alwaysTryTypes": true
-      }
-    }
+    // "import/resolver": {
+    //   "node": {
+    //     "extensions": [".js", ".jsx", ".ts", ".tsx"]
+    //   },
+    //   "typescript": {
+    //     "alwaysTryTypes": true
+    //   }
+    // }
   },
   "env": {
     "browser": true,
     "node": true,
-    "es6": true
+    "es6": true,
+    "jest": true
   },
   "rules": {
     "no-unused-vars": "off",
@@ -69,7 +70,20 @@
       {
         "groups": [["^\\u0000"], ["^@?\\w"], ["^"], ["^\\."]]
       }
-    ]
+    ],
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      },
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
   },
   "overrides": [
     // Only use Testing Library lint rules in jest test files
